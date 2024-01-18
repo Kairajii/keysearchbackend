@@ -19,6 +19,10 @@ app.use(express.json());
 connectDB();
 
 app.use('/searchVolume',KeywordRoutes)
+app.use('/',(req,res)=>{
+  res.json("hello")
+})
+
 
 const PORT =  8000;
 app.listen(PORT, () => {
